@@ -1812,7 +1812,20 @@ else
 	ShowNotification("Thank you for using the script! Press F1 to open the GUI", 5)
 end
 
+local MayHub = {}
+
+MayHub.CreateTab = CreateTab
+MayHub.ShowNotification = ShowNotification
+MayHub.OpenGUI = OpenGUI
+MayHub.CloseGUI = CloseGUI
+MayHub.ToggleGUI = ToggleGUI
+MayHub.Theme = Theme
+MayHub.ScreenGui = ScreenGui
+MayHub.MainFrame = MainFrame
+
 -- Example tab usage (remove or customise for your own project):
--- local ExampleTab = CreateTab("Example", nil)
+-- local ExampleTab = MayHub.CreateTab("Example", nil)
 -- ExampleTab:CreateSection("Section")
 -- ExampleTab:CreateButton({ Name = "Click me", Callback = function() end })
+
+return MayHub
